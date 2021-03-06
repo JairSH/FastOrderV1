@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class Users extends React.Component {
     //const Users = () => {
@@ -18,7 +18,7 @@ class Users extends React.Component {
        state = {
         loading: true,
         error: null,
-        data: undefined,
+        data: [],
       };
     
       componentDidMount() {
@@ -29,8 +29,9 @@ class Users extends React.Component {
         this.setState({ loading: true, error: null });
     
         try {
-          const data = await fetch('http://jsonplaceholder.typicode.com/users');
-          this.setState({ loading: false, data: data });
+          const response = await fetch('http://localhost:8000/postres/');
+          const data = await response.json();
+          this.setState({ loading: false, data: data.results });
         } catch (error) {
           this.setState({ loading: false, error: error });
         }
@@ -49,8 +50,10 @@ class Users extends React.Component {
                 <h1>Api</h1>
                 <ul>
                     {
-                      {this.setState.data}
-                }
+                      this.state.data.map(item => (
+                        <li key={item.id} >{item.name}</li>
+                      ))
+                    }
                 </ul>
             </div>
         );
