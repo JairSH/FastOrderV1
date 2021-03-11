@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Users extends React.Component {
+class Postres extends React.Component {
     //const Users = () => {
         /*const [equipo, setEquipo] = React.useState([])
     
@@ -80,4 +80,4 @@ class Users extends React.Component {
 }
 }
 
-export default Users;
+export default Postres;
