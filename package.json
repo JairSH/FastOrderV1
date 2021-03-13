@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "redux-logger": "^3.0.6"
   }
 }

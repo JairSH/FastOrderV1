@@ -17,15 +17,15 @@ class Orden extends React.Component {
     this.props.getFoodAction()
   }
 
-  renderListFood = this.props.comidas_api.map(item => (
-    <li key={item.id} >{item.name}</li>
-  ))
-
   render () {
     return (
       <>
-        <div>
-          {this.props.comidas_api && this.renderListFood}
+        <div class="osvaldo">
+          {
+            this.props.comida_api.map(item => (
+              <li key={item.id} >{item.name}</li>
+            ))
+          }
         </div>
         {this.props.myList.length > 0 &&
           <Categories title='Mi Orden'>
@@ -63,11 +63,11 @@ class Orden extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    myList: state.myList,
-    postres: state.postres,
-    bebidas: state.bebidas,
-    comidas: state.comidas,
-    comidas_api: state.comidas_api
+    myList: state.food.myList,
+    postres: state.food.postres,
+    bebidas: state.food.bebidas,
+    comidas: state.food.comidas,
+    comida_api: state.food.comida_api
   }
 }
 
