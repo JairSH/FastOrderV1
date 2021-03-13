@@ -1,24 +1,40 @@
+import { SET_DATA_FOOD } from '../constants'
+
+import API from '../api'
+
 export const setFavorite = payload => ({
-    type: 'SET_FAVORITE',
-    payload,
-});
+  type: 'SET_FAVORITE',
+  payload
+})
 
 export const deleteFavorite = payload => ({
-    type: 'DELETE_FAVORITE',
-    payload,
-});
+  type: 'DELETE_FAVORITE',
+  payload
+})
 
 export const loginRequest = payload => ({
-    type: 'LOGIN_REQUEST',
-    payload,
-});
+  type: 'LOGIN_REQUEST',
+  payload
+})
 
 export const logoutRequest = payload => ({
-    type: 'LOGOUT_REQUEST',
-    payload,
-});
+  type: 'LOGOUT_REQUEST',
+  payload
+})
 
 export const registerRequest = payload => ({
-    type: 'REGISTER_REQUEST',
-    payload,
-});
+  type: 'REGISTER_REQUEST',
+  payload
+})
+
+export const getFood = () => {
+  return async (dispatch) => {
+    // llame a la api
+    const data = await API.getFood()
+
+    dispatch({
+      type: SET_DATA_FOOD,
+      payload: data
+    })
+  }
+}

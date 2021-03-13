@@ -1,11 +1,11 @@
-import React from 'react';
-import '../assets/styles/components/categories.scss';
+import React from 'react'
+import '../assets/styles/components/categories.scss'
 
 const Categories = ({ children, title }) => (
-  <div className="categories">
-    <h3 className="categories__title">{title}</h3>
+  <div className='categories'>
+    <h3 className='categories__title'>{title}</h3>
     {children}
   </div>
-);
+)
 
-export default Categories;
+export default Categories
