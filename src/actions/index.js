@@ -1,4 +1,7 @@
-import { SET_DATA_FOOD } from '../constants'
+import { 
+  SET_DATA_FOOD,
+  SET_DATA_BEBIDAS
+} from '../constants'
 
 import API from '../api'
 
@@ -34,7 +37,19 @@ export const getFood = () => {
 
     dispatch({
       type: SET_DATA_FOOD,
-      payload: data
+      payload: data.results
+    })
+  }
+}
+
+export const getBebidas = () => {
+  return async (dispatch) => {
+    // llame a la api
+    const data = await API.getBebidas()
+
+    dispatch({
+      type: SET_DATA_BEBIDAS,
+      payload: data.results
     })
   }
 }

@@ -1,48 +1,13 @@
-import { SET_DATA_FOOD } from '../constants'
+import { 
+  SET_DATA_FOOD,
+  SET_DATA_BEBIDAS
+} from '../constants'
 
 const initialState = {
   user: {},
   myList: [],
-  postres: [
-    {
-      id: 1,
-      name: 'Flan',
-      price: '$130',
-      description: 'Flan de vainilla'
-    },
-    {
-      id: 2,
-      name: 'Gelatina',
-      price: '$150',
-      description: 'Gelatina de fresa'
-    },
-    {
-      id: 3,
-      name: 'Brownie',
-      price: '$230',
-      description: 'Brownie de chocolate'
-    }
-  ],
-  bebidas: [
-    {
-      id: 1,
-      name: 'Agua',
-      price: '$100',
-      description: 'Agua natural'
-    },
-    {
-      id: 2,
-      name: 'Coca-Cola',
-      price: '$120',
-      description: 'Refresco sabor cola'
-    },
-    {
-      id: 3,
-      name: 'Cerveza',
-      price: '$150',
-      description: 'Cerveza de barril'
-    }
-  ],
+  postres: [],
+  bebidas: [],
   comidas: [
     {
       id: 1,
@@ -63,7 +28,6 @@ const initialState = {
       description: 'Cortadillo con arroz de guarnicion'
     }
   ],
-  comida_api: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -97,7 +61,12 @@ const reducer = (state = initialState, action) => {
     case SET_DATA_FOOD:
       return {
         ...state,
-        comida_api: action.payload
+        postres: action.payload
+      }
+    case SET_DATA_BEBIDAS:
+      return {
+        ...state,
+        bebidas: action.payload
       }
 
     default:

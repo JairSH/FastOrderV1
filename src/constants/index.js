@@ -1,2 +1,4 @@
 
 export const SET_DATA_FOOD = 'SET_DATA_FOOD'
+export const SET_DATA_BEBIDAS = 'SET_DATA_BEBIDAS'
+
