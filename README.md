@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -64,3 +65,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 prueba llamada api
 >>>>>>> 00a6f37cb8f566a3a2167dfb8ba52dd74c530387
+=======
+# FastOrder-react
+front-react
+>>>>>>> b7d37c7031d3cc205b33f1b5513fe69a821d5316
