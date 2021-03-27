@@ -46,11 +46,14 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
+    
+    
 ]
 LOCAL_APPS = [
     'fastorder.users.apps.UsersAppConfig',
     'fastorder.menus.apps.MenusAppConfig',
-    'fastorder.clients.apps.ClientsAppConfig',
+    'fastorder.ordenes.apps.OrdenesAppConfig',
 
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -87,6 +90,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsPostCsrfMiddleware' , 
+    
 ]
 
 # Static files
@@ -168,5 +174,14 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 3,
+    'PAGE_SIZE': 15,
 }
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+CSRF_TRUSTED_ORIGINS  =  [ 
+    'change.allowed.com' , 
+]
+
+CORS_ALLOW_ALL_ORIGINS = True

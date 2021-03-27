@@ -2,26 +2,14 @@
 from rest_framework import serializers
 
 # Models
-from fastorder.clients.models import Cliente, Orden
-
-
-class ClienteModelSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Cliente
-        fields = (
-            'name',
-            'last_name',
-            'orden',
-            'description'
-        )
-
+from fastorder.clients.models import Orden
 
 class OrdenModelSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Orden
         fields = (
+            'id',
             'bebida',
             'platillo',
             'postre',
