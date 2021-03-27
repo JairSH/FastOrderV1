@@ -3,21 +3,25 @@ import { connect } from 'react-redux'
 import Categories from '../components/categories'
 import Carousel from '../components/carousel'
 import CarouselItem from '../components/carouselItems'
+import NewClient from '../components/newClient'
 import '../assets/styles/App.scss'
 import {
-  getFood,
-  getBebidas
+  getPlatillos,
+  getBebidas,
+  getPostres
 } from '../actions'
 
 class Orden extends React.Component {
   componentDidMount () {
-    this.props.getFoodAction()
+    this.props.getPlatillosAction()
     this.props.getBebidasAction()
+    this.props.getPostresAction()
   }
 
   render () {
     return (
       <>
+        <NewClient />
         {this.props.myList.length > 0 &&
           <Categories title='Mi Orden'>
             <Carousel>
@@ -26,9 +30,9 @@ class Orden extends React.Component {
               )}
             </Carousel>
           </Categories>}
-        <Categories title='Comidas'>
+        <Categories title='Platillos'>
           <Carousel>
-            {this.props.comidas.map(item =>
+            {this.props.platillos.map(item =>
               <CarouselItem key={item.id} {...item} />
             )}
           </Carousel>
@@ -55,18 +59,21 @@ class Orden extends React.Component {
 const mapStateToProps = state => {
   return {
     myList: state.food.myList,
-    postres: state.food.postres,
+    platillos: state.food.platillos,
     bebidas: state.food.bebidas,
-    comidas: state.food.comidas
+    postres: state.food.postres
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  getFoodAction: () => (
-    dispatch(getFood())
+  getPlatillosAction: () => (
+    dispatch(getPlatillos())
   ),
   getBebidasAction: () => (
     dispatch(getBebidas())
+  ),
+  getPostresAction: () => (
+    dispatch(getPostres())
   )
 })
 

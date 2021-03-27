@@ -1,33 +1,20 @@
-import { 
-  SET_DATA_FOOD,
-  SET_DATA_BEBIDAS
+import {
+  SET_DATA_PLATILLOS,
+  SET_DATA_BEBIDAS,
+  SET_DATA_POSTRES,
+  SET_DATA_CLIENTES
+  /* ADD_DATA_POSTRES,
+  ADD_DATA_CLIENTES,
+  ADD_DATA_ORDENES */
 } from '../constants'
 
 const initialState = {
   user: {},
   myList: [],
-  postres: [],
+  platillos: [],
   bebidas: [],
-  comidas: [
-    {
-      id: 1,
-      name: 'Picadillo',
-      price: '$200',
-      description: 'Picadillo con arroz de guarnicion'
-    },
-    {
-      id: 2,
-      name: 'Chuletas',
-      price: '$200',
-      description: 'Chuletas con arroz de guarnicion'
-    },
-    {
-      id: 3,
-      name: 'Cortadillo',
-      price: '$200',
-      description: 'Cortadillo con arroz de guarnicion'
-    }
-  ],
+  postres: [],
+  clientes: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -58,17 +45,42 @@ const reducer = (state = initialState, action) => {
         ...state,
         user: action.payload
       }
-    case SET_DATA_FOOD:
+    case SET_DATA_PLATILLOS:
       return {
         ...state,
-        postres: action.payload
+        platillos: action.payload
       }
     case SET_DATA_BEBIDAS:
       return {
         ...state,
         bebidas: action.payload
       }
-
+    case SET_DATA_POSTRES:
+      return {
+        ...state,
+        postres: action.payload
+      }
+    case SET_DATA_CLIENTES:
+      return {
+        ...state,
+        clientes: action.payload
+      }
+    /* case ADD_DATA_POSTRES:
+      return {
+        ...state,
+        postres: state.postres.concat(action.payload)
+      }
+    case ADD_DATA_CLIENTES:
+      return {
+        ...state,
+        clientes: state.clientes.concat(action.payload)
+      }
+      case ADD_DATA_ORDENES:
+      return {
+        ...state,
+        myList: state.clientes.concat(action.payload)
+      }
+    */
     default:
       return state
   }

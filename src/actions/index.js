@@ -1,6 +1,8 @@
-import { 
-  SET_DATA_FOOD,
-  SET_DATA_BEBIDAS
+import {
+  SET_DATA_PLATILLOS,
+  SET_DATA_BEBIDAS,
+  SET_DATA_POSTRES,
+  SET_DATA_CLIENTES
 } from '../constants'
 
 import API from '../api'
@@ -30,13 +32,13 @@ export const registerRequest = payload => ({
   payload
 })
 
-export const getFood = () => {
+export const getPlatillos = () => {
   return async (dispatch) => {
     // llame a la api
-    const data = await API.getFood()
+    const data = await API.getPlatillos()
 
     dispatch({
-      type: SET_DATA_FOOD,
+      type: SET_DATA_PLATILLOS,
       payload: data.results
     })
   }
@@ -53,3 +55,51 @@ export const getBebidas = () => {
     })
   }
 }
+
+export const getPostres = () => {
+  return async (dispatch) => {
+    // llame a la api
+    const data = await API.getPostres()
+
+    dispatch({
+      type: SET_DATA_POSTRES,
+      payload: data.results
+    })
+  }
+}
+
+export const getClientes = () => {
+  return async (dispatch) => {
+    const data = await API.getClientes()
+
+    dispatch({
+      type: SET_DATA_CLIENTES,
+      payload: data.results
+    })
+  }
+}
+
+/*
+export const createPostres = (dataToDjango) => {
+  return async (dispatch) => {
+    // llame a la api
+    const data = await API.createPostres(dataToDjango)
+    dispatch({
+      type: ADD_DATA_POSTRES,
+      payload: data
+    })
+  }
+}
+
+export const createClientes = (dataToDjango) => {
+  return async (dispatch) => {
+    const data = await API.createClientes(dataToDjango)
+  }
+}
+
+export const createOrdenes = (dataToDjango) => {
+  return async (dispatch) => {
+    const data = await API.createOrdenes(dataToDjango)
+  }
+}
+*/

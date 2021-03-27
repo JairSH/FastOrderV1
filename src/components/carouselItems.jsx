@@ -10,11 +10,11 @@ const CarouselItem = (props) => {
   const { id, name, price, description, title, isList } = props
   const handleSetFavorite = () => {
     props.setFavorite({ id, name, price, description, title })
-    document.getElementById(id).style.display = 'none'
+    // document.getElementById(id).style.display = 'none'
   }
   const handleDeleteFavorite = (itemid) => {
     props.deleteFavorite(itemid)
-    document.getElementById(id).style.display = 'inline'
+    // document.getElementById(id).style.display = 'inline'
   }
   return (
     <div className='carousel-item'>

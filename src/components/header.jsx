@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logoutRequest } from '../actions'
-import '../assets/styles/components/header.scss'
+import '../assets/styles/components/header.css'
 import userIcon from '../assets/statics/user-icon.png'
 
 const Header = props => {

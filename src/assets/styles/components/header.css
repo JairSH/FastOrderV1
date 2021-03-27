@@ -40,9 +40,13 @@ header div a{
 
 .perfil-menu ul{
   display: none;
+  position: absolute;
 }
 .perfil-menu:hover ul{
-  display: inline-block;
+  display: block;
 }
 
+.header__menu li a:hover{
+  text-decoration: underline;
+}
 

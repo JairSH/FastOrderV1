@@ -4,8 +4,10 @@ import Orden from '../pages/Orden'
 import Home from '../pages/Home'
 import Layout from '../components/layout'
 import Login from '../pages/Login'
+import Postres from '../pages/Postres'
 import Register from '../pages/register'
 import NotFound from '../pages/NotFound'
+// import prueba from '../pages/prueba'
 
 function App () {
   return (
@@ -15,6 +17,7 @@ function App () {
           <Route exact path='/' component={Home} />
           <Route exact path='/orden/' component={Orden} />
           <Route exact path='/login/' component={Login} />
+          <Route exact path='/postres/' component={Postres} />
           <Route exact path='/register' component={Register} />
           <Route component={NotFound} />
         </Switch>
@@ -24,3 +27,5 @@ function App () {
 }
 
 export default App
+
+// <Route exact path='/prueba' component={prueba} />

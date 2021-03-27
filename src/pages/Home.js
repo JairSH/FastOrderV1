@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../assets/styles/components/home.css'
 import mainfondo from '../assets/statics/main-image.jpg'
 
