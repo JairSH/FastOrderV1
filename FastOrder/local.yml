@@ -5,12 +5,7 @@ volumes:
   local_postgres_data_backups: {}
 
 services:
-  react:
-      image: react
-      ports:
-        - "3000:3000"
-      command: npm start
-
+  
   django: &django
     build:
       context: .
@@ -26,6 +21,17 @@ services:
     ports:
       - "8000:8000"
     command: /start
+
+  react: 
+    build:
+      context: .
+      dockerfile: ./front/dockerfile
+    image: react
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      
 
   postgres:
     build:

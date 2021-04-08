@@ -5,13 +5,13 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 # Views
-from .views import OrdenViewSet
-
+from . import views
 
 router = DefaultRouter()
-router.register(r'ordenes', OrdenViewSet, basename='ordenes')
+router.register(r'ordenes', views.OrdenViewSet, basename='ordenes')
 
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('api/v1/ordenes/', views.OrdenesView.as_view())
 ]
