@@ -2,7 +2,7 @@ header {
   background: #102629;
   color: white;
   display: flex;
-  height: 100px;
+  height: 140px;
   top: 0px;
   width: 100%;
   display: grid;
@@ -64,3 +64,49 @@ header div a{
   text-decoration: underline;
 }
 
+.header-menu {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+.header-menu ul  {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.header-menu li {
+  height: inherit;
+  margin-right: 10px;
+}
+
+.header-menu a {
+  color: #102629;
+  height: inherit;
+
+}
+
+.header-menu-orden {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+.header-menu-orden ul  {
+  width: inherit;
+  height: inherit;
+  list-style: none;
+}
+
+.header-menu-orden li{
+  height: inherit;
+  margin-left: 10px ;
+}
+
+.header-menu-orden  a {
+  color: #102629;
+  height: inherit;
+}

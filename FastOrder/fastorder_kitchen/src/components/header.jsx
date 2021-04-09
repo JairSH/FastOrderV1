@@ -42,6 +42,24 @@ const Header = props => {
           </li>
         </ul>
       </nav>
+      <div className='header-menu'>
+        <ul>
+          <Link to='/create_menu/'>
+            <li>
+              <a>CREAR MENU</a>
+            </li>
+          </Link>
+        </ul>
+      </div>
+      <div className='header-menu-orden'>
+        <ul>
+          <Link to='#'>
+            <li>
+              <a>ORDENES</a>
+            </li>
+          </Link>
+        </ul>
+      </div>
     </header>
   )
 }
