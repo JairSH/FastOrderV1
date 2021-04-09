@@ -8,8 +8,9 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-header div a{
-  display: none;
+header div img{
+  display: inline;
+  height: 90px;
 }
 
 .header__menu {

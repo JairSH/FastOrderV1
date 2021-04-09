@@ -8,8 +8,24 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+header li {
+  
+}
+header div {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
 header div a{
-  display: none;
+  display: inline;
+  height: 90px;
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+  text-decoration:none;
+  display: flex;
+  align-items: center;
 }
 
 .header__menu {

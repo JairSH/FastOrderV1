@@ -18,7 +18,11 @@ const Header = props => {
   return (
     <header>
       <div>
-        <a href='' alt='logo'>logo-icon</a>
+        <Link to='/'>
+          <li>
+            <a>FAST FOOD</a>
+          </li>
+        </Link>
       </div>
       <nav className='header__menu'>
         <ul className='header-right'>

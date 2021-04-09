@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { logoutRequest } from '../actions'
 import '../assets/styles/components/header.css'
 import userIcon from '../assets/statics/user-icon.png'
+import homeIcon from '../assets/statics/descarga.png'
 
 const Header = props => {
   const { user } = props
@@ -18,7 +19,9 @@ const Header = props => {
   return (
     <header>
       <div>
-        <a href='' alt='logo'>logo-icon</a>
+        <Link to='/'>
+          <img src={homeIcon} alt='icon home' />
+        </Link>
       </div>
       <nav className='header__menu'>
         <ul className='header-right'>
