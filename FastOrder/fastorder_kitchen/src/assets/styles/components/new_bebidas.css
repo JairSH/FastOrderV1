@@ -22,6 +22,10 @@
     padding: 60px 68px 40px;
     width: 300px;
   }
+
+  .bebida__container h2{
+    color: #102629;
+  }
   
   .bebida__container--form {
     display: flex;
@@ -61,18 +65,5 @@
     width: 30px;
   }
   
-  .bebida__container--register {
-    font-size: 14px;
-  }
-  
-  .bebida__container--register a {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-  }
-  
-  .bebida__container--register a:hover {
-    text-decoration: underline;
-  }
+
   
