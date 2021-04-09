@@ -19,10 +19,10 @@ const Platillos = (props) => {
     props.createPostres(form)
   }
   return (
-    <section className='postre'>
-      <section className='postre__container'>
-        <h2>Ingresar un postre</h2>
-        <form className='postre__container--form' onSubmit={handleSubmit}>
+    <section className='platillo'>
+      <section className='platillo__container'>
+        <h2>Ingresar un platillo</h2>
+        <form className='platillo__container--form' onSubmit={handleSubmit}>
           <input
             name='name'
             className='input'
@@ -51,7 +51,7 @@ const Platillos = (props) => {
   )
 }
 const mapDispatchToProps = {
-  
+  createPlatillos
 }
 
 export default connect(null, mapDispatchToProps)(Platillos)

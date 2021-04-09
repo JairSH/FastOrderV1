@@ -21,7 +21,7 @@ const Bebidas = (props) => {
   return (
     <section className='bebida'>
       <section className='bebida__container'>
-        <h2>Ingresar un platillo</h2>
+        <h2>Ingresar una bebida</h2>
         <form className='bebida__container--form' onSubmit={handleSubmit}>
           <input
             name='name'
