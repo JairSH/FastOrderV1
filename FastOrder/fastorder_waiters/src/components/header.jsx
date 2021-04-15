@@ -47,7 +47,7 @@ const Header = props => {
       <section className='section-menu-header'>
         <div>
           <ul>
-            <Link to='#'>
+            <Link to='/platillos/'>
               <li>
                 <a>PLATILLOS</a>
               </li>
