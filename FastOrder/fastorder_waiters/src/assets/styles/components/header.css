@@ -17,67 +17,90 @@ header .icon_fast{
   background-color: #102629;
   height: inherit;
   width: 50%;
+  margin-left: 20px;
 }
 
 header .icon_fast a {
   color: white;
+  font-size: 30px;
 }
 
 header div a{
   display: inline;
-  height: 90px;
-  margin-left: 20px;
-  font-size: 30px;
-  color: white;
+  font-size: 20px;
   text-decoration:none;
   display: flex;
   align-items: center;
   font-weight: 200;
+  color: #102629;
+  height: inherit;
 }
 
 .header__menu {
   margin-right: 0;
-  display: flex;
-  justify-content: flex-end;
-  height: inherit;
   width: 50%;
+  height: inherit;
 }
 
 .header-right{
   width: 100%;
+  height: inherit;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px;
 }
-.header-right li{
-  height: 60px;
+
+.header-right .nav-icon-perfil{
+  height: inherit;  
+  width: 50px;
+  margin-right: 40px;
+  margin-top: 15px;  
+}
+.nav-icon-perfil li li{
+  display: none;
+}
+.nav-icon-perfil li :hover li{
+  display: inline;
+  margin-top: 10px;
+  color: #102629;
+}
+
+.header-right .menu-hover{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-top: 15px;
+  color: white;
 }
 .header__menu ul {
   list-style: none;
   padding: 0px;
-  display: flex;
-  justify-content: flex-end;
 }
 
-.header__menu li {
-  margin-right: 20px;
-}
 
 .header__menu li a {
-  color: white;
+
   text-decoration: none;
-  height: 60px;
+
 }
 
-.perfil-menu ul{
-  display: none;
-  position: absolute;
-}
-.perfil-menu:hover ul{
-  display: block;
+.perfil-menu{
+  height: 40px;
 }
 
-.header__menu li a:hover{
-  text-decoration: underline;
+.perfil-menu ul {
+  margin: 0;
+  width: auto;
+}
+
+.perfil-menu ul li{
+  width: auto;
+  margin: 0;
+}
+
+
+.header__menu li :hover a {
+  display: inline;
 }
 
 header .section-menu-header {
@@ -90,17 +113,19 @@ header .section-menu-header {
   color:#102629;
   height: inherit;
 }
+.section-menu-header div a{
+  font-size: 30px;
+  margin-right: 20px;
+}
 
+.section-menu-header div a:hover{
+  background-color: black;
+  color: white;
+}
 header div ul  {
   width: inherit;
   height: inherit;
   display: flex;
   justify-content: center;
   list-style: none;
-}
-
-header div a {
-  color: #102629;
-  height: inherit;
-
 }

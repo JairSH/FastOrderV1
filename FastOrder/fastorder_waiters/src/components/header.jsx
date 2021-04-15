@@ -27,19 +27,19 @@ const Header = props => {
         </div>
         <nav className='header__menu'>
           <ul className='header-right'>
-            <li>
+            <li className='nav-icon-perfil'>
               <img src={userIcon} alt='' />
-            </li>
-            <li className='perfil-menu'>
-              <p>Perfil</p>
-              <ul>
-                {hasUser
-                  ? <li><a href='/'>{user.name}</a></li>
-                  : null}
-                {hasUser
-                  ? <li><a href='#logout' onClick={handleLogout}>Cerrar Sesion</a></li>
-                  : <li><Link to='/login'>Iniciar Sesion</Link></li>}
-              </ul>
+              <li className='perfil-menu'>
+                <p>Perfil</p>
+                <ul>
+                  {hasUser
+                    ? <li><a href='/'>{user.name}</a></li>
+                    : null}
+                  {hasUser
+                    ? <li><a href='#logout' onClick={handleLogout}>Cerrar Sesion</a></li>
+                    : <li><Link to='/login'>Iniciar Sesion</Link></li>}
+                </ul>
+              </li>
             </li>
           </ul>
         </nav>
