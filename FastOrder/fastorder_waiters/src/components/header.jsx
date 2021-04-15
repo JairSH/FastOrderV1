@@ -52,12 +52,12 @@ const Header = props => {
                 <a>PLATILLOS</a>
               </li>
             </Link>
-            <Link to='#'>
+            <Link to='/bebidas/'>
               <li>
                 <a>BEBIDAS</a>
               </li>
             </Link>
-            <Link to='#'>
+            <Link to='/postres/'>
               <li>
                 <a>POSTRES</a>
               </li>

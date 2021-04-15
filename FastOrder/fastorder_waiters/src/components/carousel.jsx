@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/styles/components/postres.scss'
+
 
 const Carousel = ({ children }) => (
   <section className='carousel'>

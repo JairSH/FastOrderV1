@@ -1,3 +1,56 @@
+import React from 'react'
+import { connect } from 'react-redux'
+import { getPostres } from '../actions'
+import '../assets/styles/App.scss'
+import '../assets/styles/components/postres.css'
+
+class Postres extends React.Component {
+  componentDidMount () {
+    this.props.getPostresAction()
+  }
+
+  render () {
+    return (
+      <>
+        <div className='menu-postres'>
+          <h1>Postres</h1>
+          <ul>
+            {
+              this.props.postres.map(item => (
+                <li key={item.id}>
+                  <a>
+                    {item.name}
+                  </a>
+                  <a>
+                    ${item.price}
+                  </a>
+                  <a>
+                    {item.description}
+                  </a>
+                </li>
+              ))
+              }
+          </ul>
+        </div>
+      </>
+    )
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    postres: state.food.postres
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  getPostresAction: () => (
+    dispatch(getPostres())
+  )
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Postres)
+
 /* import React from 'react';
 
 class Postres extends React.Component {
