@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { loginRequest } from '../actions'
+import '../assets/styles/components/login.scss'
 import googleIcon from '../assets/statics/google-icon.png'
 import twitterIcon from '../assets/statics/twitter-icon.png'
-import '../assets/styles/components/login.scss'
 
 const Login = (props) => {
   const [form, setValues] = useState({

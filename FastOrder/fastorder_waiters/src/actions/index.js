@@ -2,7 +2,7 @@ import {
   SET_DATA_PLATILLOS,
   SET_DATA_BEBIDAS,
   SET_DATA_POSTRES,
-  ADD_DATA_ORDENES,
+  // ADD_DATA_ORDENES,
   CLEAN_ORDER_LIST
 } from '../constants'
 

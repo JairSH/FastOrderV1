@@ -17,31 +17,54 @@ const Header = props => {
 
   return (
     <header>
-      <div>
-        <Link to='/'>
-          <li>
-            <a>FAST FOOD</a>
-          </li>
-        </Link>
+      <div className='header-menu-nav'>
+        <div className='icon_fast'>
+          <Link to='/'>
+            <li>
+              <a>FAST FOOD</a>
+            </li>
+          </Link>
+        </div>
+        <nav className='header__menu'>
+          <ul className='header-right'>
+            <li>
+              <img src={userIcon} alt='' />
+            </li>
+            <li className='perfil-menu'>
+              <p>Perfil</p>
+              <ul>
+                {hasUser
+                  ? <li><a href='/'>{user.name}</a></li>
+                  : null}
+                {hasUser
+                  ? <li><a href='#logout' onClick={handleLogout}>Cerrar Sesion</a></li>
+                  : <li><Link to='/login'>Iniciar Sesion</Link></li>}
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav className='header__menu'>
-        <ul className='header-right'>
-          <li>
-            <img src={userIcon} alt='' />
-          </li>
-          <li className='perfil-menu'>
-            <p>Perfil</p>
-            <ul>
-              {hasUser
-                ? <li><a href='/'>{user.name}</a></li>
-                : null}
-              {hasUser
-                ? <li><a href='#logout' onClick={handleLogout}>Cerrar Sesion</a></li>
-                : <li><Link to='/login'>Iniciar Sesion</Link></li>}
-            </ul>
-          </li>
-        </ul>
-      </nav>
+      <section className='section-menu-header'>
+        <div>
+          <ul>
+            <Link to='#'>
+              <li>
+                <a>PLATILLOS</a>
+              </li>
+            </Link>
+            <Link to='#'>
+              <li>
+                <a>BEBIDAS</a>
+              </li>
+            </Link>
+            <Link to='/orden/'>
+              <li>
+                <a>CREAR ORDEN</a>
+              </li>
+            </Link>
+          </ul>
+        </div>
+      </section>
     </header>
   )
 }

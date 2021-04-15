@@ -1,18 +1,26 @@
 header {
   background: #102629;
   color: white;
-  display: flex;
-  height: 100px;
+  height: 150px;
   top: 0px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
-header div {
+.header-menu-nav {
+  height: 100px;
+  width: 100%;
   display: flex;
   align-items: center;
+}
+header .icon_fast{
   list-style: none;
+  background-color: #102629;
+  height: inherit;
+  width: 50%;
+}
+
+header .icon_fast a {
+  color: white;
 }
 
 header div a{
@@ -31,17 +39,23 @@ header div a{
   margin-right: 0;
   display: flex;
   justify-content: flex-end;
+  height: inherit;
+  width: 50%;
 }
 
 .header-right{
-  width: 480px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-right li{
+  height: 60px;
 }
 .header__menu ul {
   list-style: none;
   padding: 0px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
 
 .header__menu li {
@@ -51,6 +65,7 @@ header div a{
 .header__menu li a {
   color: white;
   text-decoration: none;
+  height: 60px;
 }
 
 .perfil-menu ul{
@@ -65,3 +80,27 @@ header div a{
   text-decoration: underline;
 }
 
+header .section-menu-header {
+  width: 100%;
+  height: 50px;
+}
+.section-menu-header div {
+  width: 100%;
+  background-color: white;
+  color:#102629;
+  height: inherit;
+}
+
+header div ul  {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header div a {
+  color: #102629;
+  height: inherit;
+
+}
