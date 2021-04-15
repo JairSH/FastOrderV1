@@ -101,6 +101,8 @@ header div a{
 
 .header__menu li :hover a {
   display: inline;
+  background-color: black;
+  
 }
 
 header .section-menu-header {
@@ -112,6 +114,13 @@ header .section-menu-header {
   background-color: white;
   color:#102629;
   height: inherit;
+}
+.section-menu-header div li{
+  width: 250px;
+}
+.section-menu-header div ul li{
+  display: flex;
+  justify-content: center;
 }
 .section-menu-header div a{
   font-size: 30px;

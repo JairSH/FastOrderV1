@@ -57,6 +57,11 @@ const Header = props => {
                 <a>BEBIDAS</a>
               </li>
             </Link>
+            <Link to='#'>
+              <li>
+                <a>POSTRES</a>
+              </li>
+            </Link>
             <Link to='/orden/'>
               <li>
                 <a>CREAR ORDEN</a>

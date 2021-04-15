@@ -33,6 +33,8 @@ main .text-main p{
     font-weight:900;
     margin-bottom: 55px;
     position: absolute;
+    background-color: #102629;
+    border: solid 15px white;
 }
 
 main .main-buttons{
