@@ -43,8 +43,6 @@ class Orden extends React.Component {
       }
     }
 
-    debugger
-
     this.props.saveOrderListAction(myNewList)
   }
 
