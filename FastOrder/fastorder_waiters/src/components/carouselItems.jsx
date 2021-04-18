@@ -42,8 +42,7 @@ const CarouselItem = (props) => {
         <p className='carousel-item__details--subtitle'>
           {isList
             ? `${category} - ${pk}`
-            : `${category} - ${name} - ${price}`
-          }
+            : `${category} - ${name} - ${price}`}
         </p>
       </div>
     </div>

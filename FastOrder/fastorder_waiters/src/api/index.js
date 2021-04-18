@@ -48,7 +48,54 @@ const saveOrder = async (dataToDjango) => {
     }
   )
 
-  debugger
+  const data = await response.json()
+  return data
+}
+
+const loginRequest = async (dataToDjango) => {
+  const response = await fetch(
+    `${BASE_API}/users/login/`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dataToDjango)
+    }
+  )
+
+  const data = await response.json()
+  return data
+}
+
+const registerRequest = async (dataToDjango) => {
+  const response = await fetch(
+    `${BASE_API}/users/singup/`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dataToDjango)
+    }
+  )
+
+  const data = await response.json()
+  return data
+}
+
+const tokenRequest = async (dataToDjango) => {
+  const response = await fetch(
+    `${BASE_API}/users/verify/`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dataToDjango)
+    }
+  )
+
   const data = await response.json()
   return data
 }
@@ -89,7 +136,10 @@ export default {
   getBebidas,
   getPostres,
   getClientes,
-  saveOrder
+  saveOrder,
+  loginRequest,
+  registerRequest,
+  tokenRequest
   /* createPostres,
   createClientes,
   */

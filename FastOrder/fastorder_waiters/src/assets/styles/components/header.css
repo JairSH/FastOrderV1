@@ -27,7 +27,6 @@ header .icon_fast a {
 
 header div a{
   display: inline;
-  font-size: 20px;
   text-decoration:none;
   display: flex;
   align-items: center;
@@ -111,8 +110,7 @@ header .section-menu-header {
 }
 .section-menu-header div {
   width: 100%;
-  background-color: white;
-  color:#102629;
+  background-color: black;
   height: inherit;
 }
 .section-menu-header div li{
@@ -123,12 +121,11 @@ header .section-menu-header {
   justify-content: center;
 }
 .section-menu-header div a{
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 20px;
 }
 
 .section-menu-header div a:hover{
-  background-color: black;
   color: white;
 }
 header div ul  {

@@ -18,21 +18,46 @@ export const deleteFavorite = payload => ({
   payload
 })
 
-export const loginRequest = payload => ({
+/* export const loginRequest = payload => ({
   type: 'LOGIN_REQUEST',
   payload
 })
+*/
+export const loginRequest = (dataToDjango) => {
+  return async (dispatch) => {
+    // llame a la api
+    const data = await API.loginRequest(dataToDjango)
+    dispatch({
+      type: 'LOGIN_REQUEST',
+      payload: data
+    })
+  }
+}
 
 export const logoutRequest = payload => ({
   type: 'LOGOUT_REQUEST',
   payload
 })
 
-export const registerRequest = payload => ({
-  type: 'REGISTER_REQUEST',
-  payload
-})
+export const registerRequest = (dataToDjango) => {
+  return async (dispatch) => {
+    const data = await API.registerRequest(dataToDjango)
+    dispatch({
+      type: 'REGISTER_REQUEST',
+      payload: data
+    })
+  }
+}
 
+export const tokenRequest = (dataToDjango) => {
+  return async (dispatch) => {
+    const data = await API.tokenRequest(dataToDjango)
+    dispatch({
+      type: 'TOKEN_REQUEST',
+      payload: data
+    })
+  }
+}
 export const cleanOrderList = payload => ({
   type: CLEAN_ORDER_LIST
 })

@@ -45,6 +45,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         user: action.payload
       }
+    case 'TOKEN_REQUEST':
+      return {
+        ...state,
+        user: action.payload
+      }
     case SET_DATA_PLATILLOS:
       return {
         ...state,
