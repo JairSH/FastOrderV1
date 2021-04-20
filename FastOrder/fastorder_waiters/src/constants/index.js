@@ -4,6 +4,8 @@ export const SET_DATA_BEBIDAS = 'SET_DATA_BEBIDAS'
 export const SET_DATA_POSTRES = 'SET_DATA_POSTRES'
 export const ADD_DATA_ORDENES = 'ADD_DATA_ORDENES'
 export const CLEAN_ORDER_LIST = 'CLEAN_ORDER_LIST'
+export const LOADING = 'LOADING'
+export const ERROR = 'ERROR'
 
 /* export const ADD_DATA_POSTRES = 'ADD_DATA_POSTRES'
 export const ADD_DATA_CLIENTES = 'ADD_DATA_CLIENTES'

@@ -3,7 +3,9 @@ import {
   SET_DATA_BEBIDAS,
   SET_DATA_POSTRES,
   ADD_DATA_ORDENES,
-  CLEAN_ORDER_LIST
+  CLEAN_ORDER_LIST,
+  LOADING,
+  ERROR
   /* ADD_DATA_POSTRES,
   ADD_DATA_CLIENTES,
   */
@@ -11,7 +13,7 @@ import {
 
 const initialState = {
   loading: false,
-  error: false,
+  error: '',
   user: {},
   myList: [],
   platillos: [],
@@ -21,6 +23,17 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case LOADING:
+      return {
+        ...state,
+        loading: true
+      }
+    case ERROR:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false
+      }
     case 'SET_FAVORITE':
       return {
         ...state,
@@ -55,7 +68,9 @@ const reducer = (state = initialState, action) => {
     case SET_DATA_PLATILLOS:
       return {
         ...state,
-        platillos: action.payload
+        platillos: action.payload,
+        loading: false,
+        error: ''
       }
     case SET_DATA_BEBIDAS:
       return {

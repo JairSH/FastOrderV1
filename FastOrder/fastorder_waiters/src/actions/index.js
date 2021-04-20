@@ -3,7 +3,9 @@ import {
   SET_DATA_BEBIDAS,
   SET_DATA_POSTRES,
   // ADD_DATA_ORDENES,
-  CLEAN_ORDER_LIST
+  CLEAN_ORDER_LIST,
+  LOADING,
+  ERROR
 } from '../constants'
 
 import API from '../api'
@@ -65,6 +67,9 @@ export const cleanOrderList = payload => ({
 export const getPlatillos = () => {
   return async (dispatch) => {
     // llame a la api
+    dispatch({
+      type: LOADING
+    })
     try {
       const data = await API.getPlatillos()
       dispatch({
@@ -73,6 +78,10 @@ export const getPlatillos = () => {
       })
     } catch (error) {
       console.log('Error: ', error.message)
+      dispatch({
+        type: ERROR,
+        payload: 'Lo sentimos ocurrio un error, Intentelo mas tarde'
+      })
     }
   }
 }
