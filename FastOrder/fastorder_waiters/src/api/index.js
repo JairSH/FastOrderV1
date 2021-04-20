@@ -4,7 +4,6 @@ const getPlatillos = async () => {
   const response = await fetch(
     `${BASE_API}/platillos/`
   )
-
   const data = await response.json()
   return data
 }

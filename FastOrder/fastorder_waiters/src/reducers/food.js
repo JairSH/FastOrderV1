@@ -10,6 +10,8 @@ import {
 } from '../constants'
 
 const initialState = {
+  loading: false,
+  error: false,
   user: {},
   myList: [],
   platillos: [],

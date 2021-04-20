@@ -65,12 +65,15 @@ export const cleanOrderList = payload => ({
 export const getPlatillos = () => {
   return async (dispatch) => {
     // llame a la api
-    const data = await API.getPlatillos()
-
-    dispatch({
-      type: SET_DATA_PLATILLOS,
-      payload: data.results
-    })
+    try {
+      const data = await API.getPlatillos()
+      dispatch({
+        type: SET_DATA_PLATILLOS,
+        payload: data.results
+      })
+    } catch (error) {
+      console.log('Error: ', error.message)
+    }
   }
 }
 
